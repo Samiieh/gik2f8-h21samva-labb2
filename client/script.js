@@ -98,10 +98,10 @@ function renderList() {
 
 function renderTask({ id, title, description, dueDate, completed }) {
   const itemStatus = completed == true ? "Checked" : " ";
-  const itemDone = completed == true ? "rounded-md bg-black/90" : " ";
+  const itemDone = completed == true ? "rounded-md bg-black/50  " : " ";
 
   let html = `
-    <li class="select-none mt-2 py-2 border-b border-amber-300 ${itemDone}">
+    <li class="select-none mt-2 py-2 border-b-2 border-indigo-900 ${itemDone}">
       <div class="flex items-center">
         <input type="checkbox" value="${id}" onclick="updateItem(${id})" ${itemStatus}>
         <h3 class="mb-2 flex-1 text-xl font-bold my-1 ml-2 text-pink-700 normal-case">${title}</h3>
